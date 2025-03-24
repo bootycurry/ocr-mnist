@@ -25,3 +25,12 @@ display_mnist_example <- function(data, index = 1) {
 
 
 display_mnist_example(df, index = 100)
+
+#STEP 1: PREPROCESSING DATA
+
+data_preprocessed <- preprocess_data(df)
+
+x_train <- data_preprocessed$x_train
+y_train <- data_preprocessed$y_train
+x_test <- data_preprocessed$x_test
+y_test <- data_preprocessed$y_test
