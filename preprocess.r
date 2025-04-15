@@ -1,15 +1,12 @@
 library(keras3)
 
 preprocess_data <- function(data, validation_split = 0.2) {
-  # Extract train data and labels
   x_train <- data$train$images
   y_train <- data$train$labels
   
-  # Extract test data and labels
   x_test <- data$test$images
   y_test <- data$test$labels
   
-  # Normalize pixel values to range [0,1]
   x_train <- x_train / 255
   x_test <- x_test / 255
   
@@ -21,7 +18,6 @@ preprocess_data <- function(data, validation_split = 0.2) {
   y_train <- to_categorical(y_train, 10)
   y_test <- to_categorical(y_test, 10)
   
-  # Return preprocessed data
   return(list(
     x_train = x_train,
     y_train = y_train,

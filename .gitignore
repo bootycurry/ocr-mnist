@@ -1,7 +1,10 @@
 .Rproj.user
 .Rhistory
-.RData
+.RData*
 .Ruserdata
+*.keras
 
 
 data/
+plots/
+test/
